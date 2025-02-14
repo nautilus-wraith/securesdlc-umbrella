@@ -36,7 +36,7 @@ jobs:
       - name: Display Visibility
         run: echo "Repository visibility is ${{ steps.get_visibility.outputs.visibility }}"
 
-  securesdlc-umbrella:
+  securesdlc-sast:
     needs: [securesdlc-visibility-check]
     if: ${{ needs.securesdlc-visibility-check.outputs.visibility != 'public' }}
     uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sast.yml@main
