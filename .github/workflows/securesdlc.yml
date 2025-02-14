@@ -38,7 +38,7 @@ jobs:
 
   securesdlc-sast:
     needs: [securesdlc-visibility-check]
-    if: ${{ needs.securesdlc-visibility-check.outputs.visibility != 'public' }}
+    # if: ${{ needs.securesdlc-visibility-check.outputs.visibility != 'public' }}
     uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sast.yml@main
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
