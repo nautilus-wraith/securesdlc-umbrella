@@ -17,12 +17,15 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       visibility: ${{ steps.get_visibility.outputs.visibility }}
+    env:
+      REF_NAME: ${{ github.ref_name }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
       - name: Init
         run: |
           echo "securesdlc-test"
-          echo ${{ github.ref_name }}
-          echo ${{ github.event.repository.default_branch }}
+          echo $REF_NAME
+          echo $DEFAULT_BRANCH
 
       - name: Get Repository Visibility
         id: get_visibility
