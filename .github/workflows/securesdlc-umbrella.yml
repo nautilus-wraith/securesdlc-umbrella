@@ -1,5 +1,5 @@
 name: SecureSDLC Umbrella
-run-name: "[SecureSDLC Umbrella Workflow] Ref:${{ github.ref_name }}"
+run-name: "[SecureSDLC Umbrella Workflow] Ref:${{ github.ref_name }} Event:${{ github.event_name }}"
 
 on:
   workflow_dispatch: {}
