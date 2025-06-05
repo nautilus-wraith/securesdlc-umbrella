@@ -24,3 +24,6 @@ jobs:
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+
+  securesdlc-zizmor:
+    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-zizmor.yml@main
