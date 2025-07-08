@@ -1,4 +1,4 @@
-name: SecureSDLC Umbrella
+name: Nautilus SecureSDLC Umbrella
 run-name: "[SecureSDLC Umbrella Workflow] Ref:${{ github.ref_name }} Event:${{ github.event_name }}"
 
 on:
@@ -14,16 +14,16 @@ on:
 
 jobs:
   securesdlc-sast:
-    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sast.yml@main
+    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sast.yml@release-stable
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
 
   securesdlc-sca:
-    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sca.yml@main
+    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sca.yml@release-stable
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
 
   securesdlc-zizmor:
-    uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-zizmor.yml@main
+    uses: nautilus-wraith/securesdlc-zizmor/.github/workflows/securesdlc-zizmor.yml@release-stable
