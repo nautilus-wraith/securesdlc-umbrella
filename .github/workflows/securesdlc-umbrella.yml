@@ -13,6 +13,15 @@ on:
   # pull_request_target: {} # Gives workflows excessive permissions. Not wanted.
 
 jobs:
+  test-job:
+    name: Test Job
+    continue-on-error: true 
+    runs-on: ubuntu-24.04
+    steps:
+      - name: test-job
+        run: |
+          echo "test-job"
+          
   securesdlc-sast:
     if: ${{ github.actor != 'dependabot[bot]' }}
     uses: nautilus-wraith/securesdlc-sast/.github/workflows/securesdlc-sast.yml@main
