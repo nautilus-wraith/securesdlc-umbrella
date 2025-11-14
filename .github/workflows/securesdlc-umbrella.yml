@@ -21,6 +21,7 @@ jobs:
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+      SDLC_SLACK_NOTIFICATIONS: ${{ secrets.SDLC_SLACK_NOTIFICATIONS }}      
 
   securesdlc-sca:
     if: ${{ github.actor != 'dependabot[bot]' }}
@@ -28,7 +29,10 @@ jobs:
     secrets:
       SEMGREP_APP_URL: ${{ secrets.SEMGREP_APP_URL }}
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+      SDLC_SLACK_NOTIFICATIONS: ${{ secrets.SDLC_SLACK_NOTIFICATIONS }}
 
   securesdlc-zizmor:
     if: ${{ github.actor != 'dependabot[bot]' }}
     uses: nautilus-wraith/securesdlc-zizmor/.github/workflows/securesdlc-zizmor.yml@main
+    secrets:
+      SDLC_SLACK_NOTIFICATIONS: ${{ secrets.SDLC_SLACK_NOTIFICATIONS }}
