@@ -33,6 +33,6 @@ jobs:
 
   securesdlc-zizmor:
     if: ${{ github.actor != 'dependabot[bot]' }}
-    uses: nautilus-wraith/securesdlc-zizmor/.github/workflows/securesdlc-zizmor.yml@main
+    uses: nautilus-wraith/securesdlc-zizmor/.github/workflows/securesdlc-zizmor.yml@release-stable
     secrets:
       SDLC_SLACK_NOTIFICATIONS: ${{ secrets.SDLC_SLACK_NOTIFICATIONS }}
